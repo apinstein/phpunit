@@ -1927,6 +1927,11 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
         return new PHPUnit_Framework_MockObject_Stub_ConsecutiveCalls($args);
     }
 
+    public function getData()
+    {
+        return $this->data;
+    }
+
     /**
      * Gets the data set description of a TestCase.
      *
@@ -1936,7 +1941,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
      *
      * @since  Method available since Release 3.3.0
      */
-    protected function getDataSetAsString($includeData = true)
+    public function getDataSetAsString($includeData = TRUE)
     {
         $buffer = '';
 
